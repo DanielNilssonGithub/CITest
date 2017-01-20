@@ -32,9 +32,13 @@ platform :ios do
     changelog = changelog_from_git_commits
     puts "THIS WILL BE THE CHANGELOG: #{changelog}"
 
-    add_git_tag(
-      tag: "preview_1_(1)",
-      message: changelog
+    commit = last_git_commit
+    set_github_release(
+      repository_name: "DanielNilssonGithub/CITest",
+      name: "Preview from Circle CI",
+      tag_name: "preview_1.0.0.55",
+      commitish: commit[:commit_hash],
+      description: changelog
     )
   end
 

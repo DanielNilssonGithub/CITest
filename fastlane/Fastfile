@@ -33,7 +33,7 @@ platform :ios do
     puts "THIS WILL BE THE CHANGELOG: #{changelog}"
 
     add_git_tag(
-      tag: "preview_1 (1)",
+      tag: "preview_1_(1)",
       message: changelog
     )
   end

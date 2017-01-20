@@ -30,7 +30,7 @@ platform :ios do
 
     # Upload to Crashlytics beta
     changelog = changelog_from_git_commits(
-      tag_match_pattern = "preview*"
+      tag_match_pattern: "preview*"
     )
     puts "THIS WILL BE THE CHANGELOG: #{changelog}"
 
@@ -38,7 +38,7 @@ platform :ios do
     set_github_release(
       repository_name: "DanielNilssonGithub/CITest",
       name: "Preview from Circle CI",
-      tag_name: "preview_1.0.0.55",
+      tag_name: "asdasdas",
       commitish: commit[:commit_hash],
       description: changelog
     )
